@@ -1,46 +1,25 @@
-#include<stdlib.h>
-#include<stdio.h>
-
-int     ft_prime(int numb)
-{
-    int i = 2;
-    if (numb == 1)
-        return 0;
-    if (numb == 2)
-        return 1;
-    while (i <= numb/2)
-    {
-        if (numb % i == 0)
-            return 0;
-        i++;
-    }
-    return 1;
-}
+#include <stdio.h>
+#include <stdlib.h>
 
 int     main(int argc, char **argv)
 {
-    int switcher = 1;
     if (argc == 2)
     {
         int numb = atoi(argv[1]);
         int i = 2;
         if (numb == 1)
-            printf("%d", numb);
-        while (numb >= i)
+            printf("1");
+        while (numb > 1)
         {
-            if (numb % i == 0 && ft_prime(i) == 1)
+            if (numb % i == 0)
             {
-                if (switcher == 1)
-                {
-                    switcher = 0;
-                    printf("%d", i);
-                }
-                else
-                    printf("*%d", i);
+                printf("%d", i);
                 numb /= i;
+                if (numb > 1)
+                    printf("*");
             }
             else
-                i++;
+                i++;    
         }
     }
     printf("\n");
