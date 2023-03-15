@@ -24,6 +24,7 @@ char    *ft_strdup(char *src)
         ret[i] = src[i];
         i++;
     }
+    ret[i] = '\0';
     return ret;
 }
 
