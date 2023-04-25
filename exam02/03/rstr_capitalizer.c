@@ -4,7 +4,7 @@ void    ft_capitalizer(char *str)
 {
     int i = 0;
 
-    while (str[i])
+    while (str[i]) // while(str && str[i])
     {
         if ((str[i] >= 'a' && str[i] <= 'z') && (str[i + 1] == ' ' || str[i + i] == '\t' || str[i + 1] == '\0'))
             str[i] -= 32;
