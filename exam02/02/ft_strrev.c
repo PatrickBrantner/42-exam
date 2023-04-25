@@ -14,7 +14,7 @@ char    *ft_strrev(char *str)
     int i = 0;
     int j = ft_strlen(str) - 1;
     
-    while (i < j)
+    while (i < j)    //--> while (str && i < j)?????
     {
         temp = str[j];
         str[j] = str[i];
