@@ -30,7 +30,7 @@ $
 #include<stdlib.h>
 #include<stdio.h>
 
-void    ft_paramsum(int a, int b)
+void    ft_pgcd(int a, int b)
 {
     int del = a;
 
@@ -55,7 +55,7 @@ int     main(int argc, char **argv)
 
         x = atoi(argv[1]);
         y = atoi(argv[2]);
-        ft_paramsum(x,y);
+        ft_pgcd(x,y);
     }
     printf("\n");
 }
